@@ -1,6 +1,9 @@
 import requests
 import base64
 from decoder import decrypt_token 
+
+
+
 class LineClient:
     def __init__(self, token ):
         decodeToken=decrypt_token(base64.b64decode(token.encode('utf-8'))).decode("utf-8").replace("\x05", "") 
